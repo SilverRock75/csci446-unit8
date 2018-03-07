@@ -1,0 +1,29 @@
+extends layout
+
+include _includes/sharedHTMLfunctions
+
+block content
+  .row.page-header: .col-lg-12
+      h1= pageHeader.title+' - '+pageHeader.name
+  .row
+    .col-xs-12.col-md-9
+      .row
+        a.btn.btn-default.pull-right(href="/course/review/new") Add Assignment
+        .col-xs-12.col-sm-6
+          p= 'Professor: '+course.prof
+          p= 'Credits: '+course.credit
+          p= 'Time: '+course.time
+          p= 'Location: '+course.loc
+          each assignment in course.assignments
+            .panel.panel-primary
+              .panel-heading
+                h2.panel-title= assignment.name
+              .panel-body
+                p
+                  ='Due: '+assignment.duedate
+                p
+                  ='Points: '+assignment.point
+                p
+                  ='Status: '+assignment.status
+    .col-xs-12.col-md-3
+      p.lead #{course.name}
