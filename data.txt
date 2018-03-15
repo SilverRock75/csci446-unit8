@@ -1,0 +1,19 @@
+db.courses.save({
+	name: 'CSCI-446',
+	title: 'Web Apps',
+	prof: 'Cyndi Rader',
+	address: '125 High Street, Reading, RG6 1PS',
+	credit: 3,
+	time: 'Online',
+	loc: 'No Room Assigned',
+	assignments: [{
+		name: 'Unit 7',
+		duedate: '2/28/18',
+		point: 25,
+		status: 'Submitted'
+	}, {
+		name: 'Unit 8',
+		duedate: '3/7/18',
+		point: 66,
+		status: 'In Progress'
+})
